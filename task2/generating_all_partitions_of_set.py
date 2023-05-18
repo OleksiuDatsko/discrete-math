@@ -1,20 +1,18 @@
 def generate_partitions(n: int):
-    elements = list(range(1, n + 1))
+    P = list(range(1, n + 1))
     БЛОК = [1] * (n + 1)
     ВПЕР = [True] * (n + 1)
     СЛЕД = [0] * (n + 1)
     ПРЕД = [0] * (n + 1)
-    counter = 0
 
     def print_partition():
         subsets = []
         for i in set(БЛОК):
             subsets.append(
-                ''.join(str(elements[j - 1]) for j in range(1, n + 1) if БЛОК[j] == i)
+                ''.join(str(P[j - 1]) for j in range(1, n + 1) if БЛОК[j] == i)
             )
         partition = f"({')('.join(subsets)})"
         print(partition)
-        return counter
 
     print_partition()
     j = n
