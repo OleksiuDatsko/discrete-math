@@ -1,4 +1,4 @@
-class algo1_11:
+class algo1:
     def __init__(self, n: int) -> None:
         self.P = [i + 1 for i in range(n)]
 
